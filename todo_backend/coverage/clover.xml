@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1784295043360" clover="3.2.0">
+  <project timestamp="1784295043360" name="All files">
+    <metrics statements="46" coveredstatements="41" conditionals="15" coveredconditionals="15" methods="18" coveredmethods="13" elements="79" coveredelements="69" complexity="0" loc="46" ncloc="46" packages="3" files="4" classes="4"/>
+    <package name="todo_backend">
+      <metrics statements="34" coveredstatements="29" conditionals="5" coveredconditionals="5" methods="15" coveredmethods="10"/>
+      <file name="App.js" path="C:\Program Files\Java Project\mern-todo-app\TODO\todo_backend\App.js">
+        <metrics statements="34" coveredstatements="29" conditionals="5" coveredconditionals="5" methods="15" coveredmethods="10"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="cond" truecount="5" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="todo_backend.models">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Todo.js" path="C:\Program Files\Java Project\mern-todo-app\TODO\todo_backend\models\Todo.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="todo_backend.utils">
+      <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+      <file name="calculateTaskCompletionPercentage.js" path="C:\Program Files\Java Project\mern-todo-app\TODO\todo_backend\utils\calculateTaskCompletionPercentage.js">
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="8" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="validateEmail.js" path="C:\Program Files\Java Project\mern-todo-app\TODO\todo_backend\utils\validateEmail.js">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="7" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
