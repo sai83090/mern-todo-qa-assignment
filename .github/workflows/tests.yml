@@ -1,0 +1,82 @@
+name: Run Test Suites
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  jest-tests:
+    name: Jest Unit + Integration Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: todo_backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: todo_backend/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Jest tests with coverage
+        run: npm test
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jest-coverage-report
+          path: todo_backend/coverage
+
+  cypress-tests:
+    name: Cypress E2E Tests
+    runs-on: ubuntu-latest
+
+    services:
+      mongodb:
+        image: mongo:6
+        ports:
+          - 27017:27017
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install backend dependencies
+        working-directory: todo_backend
+        run: npm install
+
+      - name: Install frontend dependencies
+        working-directory: todo_frontend
+        run: npm install
+
+      - name: Start backend server
+        working-directory: todo_backend
+        run: nohup npm start &
+
+      - name: Wait for backend to be ready
+        run: npx wait-on http://localhost:5000/get --timeout 60000
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: todo_frontend
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+
+      - name: Upload Cypress screenshots on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: todo_frontend/cypress/screenshots
